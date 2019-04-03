@@ -4,7 +4,6 @@ import os
 import coloredlogs
 from gensim.models import KeyedVectors
 
-
 class WordAnalogyW2VFormat:
     """
     Class for evaluation of embeddings using gensim.
@@ -27,7 +26,7 @@ class WordAnalogyW2VFormat:
         self.path_to_analogy = os.path.abspath(path_to_analogy)
         self.logger = self.__init_logger()
 
-    def evaluate(self):
+    def evaluate_word_analogy(self):
         """
         Evaluate every embedding in self.paths. Logs Path of embedding, Vocab and vector size, total and each section accuracy
         """
@@ -48,6 +47,21 @@ class WordAnalogyW2VFormat:
 
                 self.logger.info(f"Section: {item['section']}")
                 self.logger.info(f"Acc: {acc}")
+
+    def evaluate_word_pairs(self, path_to_simlex):
+        """
+        Evaluate word pairs
+        """
+        for path in self.paths:
+            model = KeyedVectors.load_word2vec_format(path)
+            similarity = model.evaluate_word_pairs(path_to_simlex)
+            pearson = similarity[0]
+            spearman = similarity[1]
+            self.logger.info(f'\nPath: {path}')
+            self.logger.info(f'Pearson correlation coefficient: {round(pearson[0],4)}, p-value: {round(pearson[1],4)}')
+            self.logger.info(f'Spearman correlation coefficient: {round(spearman.correlation,4)}, p-value: {round(spearman.pvalue,4)}')
+            self.logger.info(f'Out of vocab %: {round(similarity[2],4)}')
+
 
     @staticmethod
     def __init_logger(path_to_logger: str = '../data/w2v.log') -> logging.Logger:

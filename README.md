@@ -4,7 +4,10 @@ Evaluation of polish word embeddings prepared by various research groups. Evalua
 
 ## Used word embeddings
 ### Word2Vec Format
+IPIPAN Models:
 http://dsmodels.nlp.ipipan.waw.pl/
+
+Facebook FastText:
 https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pl.300.vec.gz
 
 ### Pre-Trained Models
@@ -16,9 +19,12 @@ http://vectors.nlpl.eu/repository (id:62,167)
 https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pl.300.bin.gz
 
 ## Evaluation procedure
-https://dl.fbaipublicfiles.com/fasttext/word-analogies/questions-words-pl.txt
+
 
 ## Results
 
 ## References
-https://clarin-pl.eu/dspace/handle/11321/446
+Polish Word Analogy: https://dl.fbaipublicfiles.com/fasttext/word-analogies/questions-words-pl.txt
+
+MSimLex999 Polish
+http://zil.ipipan.waw.pl/CoDeS?action=AttachFile&do=view&target=MSimLex999_Polish.zip
