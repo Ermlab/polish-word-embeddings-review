@@ -26,7 +26,7 @@ class WordAnalogyW2VFormat:
         self.path_to_analogy = os.path.abspath(path_to_analogy)
         self.logger = self.__init_logger()
 
-    def evaluate_word_analogy(self):
+    def evaluate_word_analogy(self, more_info = False):
         """
         Evaluate every embedding in self.paths. Logs Path of embedding, Vocab and vector size, total and each section accuracy
         """
@@ -39,15 +39,15 @@ class WordAnalogyW2VFormat:
             self.logger.info(f'Vocab size = {len(model.vocab)}')
             self.logger.info(f'Vector size = {model.vector_size}')
             self.logger.info(f"Word analogies accuracy: {analogy[0]}\n")
+            if more_info:
+                for item in analogy[1]:
+                    sum_of_samples = (len(item['correct']) + len(item['incorrect']))
+                    if sum_of_samples == 0:
+                        continue
+                    acc = round((len(item['correct']) / sum_of_samples) * 100, 2)
 
-            for item in analogy[1]:
-                sum_of_samples = (len(item['correct']) + len(item['incorrect']))
-                if sum_of_samples == 0:
-                    continue
-                acc = round((len(item['correct']) / sum_of_samples) * 100, 2)
-
-                self.logger.info(f"Section: {item['section']}")
-                self.logger.info(f"Acc: {acc}")
+                    self.logger.info(f"Section: {item['section']}")
+                    self.logger.info(f"Acc: {acc}")
             yield {
                 'name': os.path.basename(path),
                 'vocab': len(model.vocab),
