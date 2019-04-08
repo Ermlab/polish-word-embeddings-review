@@ -31,6 +31,7 @@ class WordAnalogyW2VFormat:
         Evaluate every embedding in self.paths. Logs Path of embedding, Vocab and vector size, total and each section accuracy
         """
         for path in self.paths:
+
             model = KeyedVectors.load_word2vec_format(path)
             analogy = model.evaluate_word_analogies(self.path_to_analogy)
 
@@ -47,6 +48,12 @@ class WordAnalogyW2VFormat:
 
                 self.logger.info(f"Section: {item['section']}")
                 self.logger.info(f"Acc: {acc}")
+            yield {
+                'name': os.path.basename(path),
+                'vocab': len(model.vocab),
+                'vector': model.vector_size,
+                'analogy acc': analogy[0]
+            }
 
     def evaluate_word_pairs(self, path_to_simlex):
         """
@@ -58,9 +65,15 @@ class WordAnalogyW2VFormat:
             pearson = similarity[0]
             spearman = similarity[1]
             self.logger.info(f'\nPath: {path}')
-            self.logger.info(f'Pearson correlation coefficient: {round(pearson[0],4)}, p-value: {round(pearson[1],4)}')
-            self.logger.info(f'Spearman correlation coefficient: {round(spearman.correlation,4)}, p-value: {round(spearman.pvalue,4)}')
+            self.logger.info(f'Pearson correlation coefficient: {round(pearson[0], 4)}, p-value: {round(pearson[1], 4)}')
+            self.logger.info(f'Spearman correlation coefficient: {round(spearman.correlation, 4)}, p-value: {round(spearman.pvalue, 4)}')
             self.logger.info(f'Out of vocab %: {round(similarity[2],4)}')
+            yield {
+                'name': os.path.basename(path),
+                'pearson': round(pearson[0], 4),
+                'spearman': round(spearman.correlation, 4),
+                'out of vocab': round(similarity[2], 4),
+            }
 
 
     @staticmethod

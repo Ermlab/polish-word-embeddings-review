@@ -1,8 +1,23 @@
 import argparse
+import csv
 import os
 import sys
+from typing import Dict, Generator
 
 from evaluation.word_analogy import WordAnalogyW2VFormat
+
+WORD_ANALOGY_CSV_PATH = os.path.abspath('../data/analogy.csv')
+WORD_PAIRS_CSV_PATH = os.path.abspath('../data/word_pairs.csv')
+
+
+def save_to_csv(dict_gen: Generator[Dict, None, None], path):
+    with open(path, 'a+') as csv_file:
+        data_to_save = list(dict_gen)
+        keys_from_dict = list(data_to_save[0].keys())
+        csv_writer = csv.DictWriter(csv_file, keys_from_dict)
+        csv_writer.writeheader()
+        csv_writer.writerows(data_to_save)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(prog=os.path.basename(sys.argv[0]),
@@ -29,7 +44,10 @@ if __name__ == '__main__':
     analogy_path = os.path.abspath(args.analogy_path)
 
     w2v_val = WordAnalogyW2VFormat(input_path, analogy_path)
-    w2v_val.evaluate_word_analogy()
+    analogy_gen = w2v_val.evaluate_word_analogy()
+    save_to_csv(analogy_gen, WORD_ANALOGY_CSV_PATH)
+
     if args.simlex_path:
         path_to_simlex = os.path.abspath(args.simlex_path)
-        w2v_val.evaluate_word_pairs(path_to_simlex)
+        words_pairs = w2v_val.evaluate_word_pairs(path_to_simlex)
+        save_to_csv(words_pairs, WORD_PAIRS_CSV_PATH)
