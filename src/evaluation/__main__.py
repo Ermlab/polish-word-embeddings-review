@@ -33,7 +33,7 @@ if __name__ == '__main__':
                         type=str,
                         required=True,
                         help='Path to questions words file with analogy words.')
-    parser.add_argument('-a',
+    parser.add_argument('-sp',
                         '--simlex-path',
                         type=str,
                         help='Path to SimLex File file with words pairs.')
