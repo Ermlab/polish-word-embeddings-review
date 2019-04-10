@@ -11,11 +11,13 @@ WORD_PAIRS_CSV_PATH = os.path.abspath('../data/word_pairs.csv')
 
 
 def save_to_csv(dict_gen: Generator[Dict, None, None], path):
+    file_exists = os.path.exists(path)
     with open(path, 'a+') as csv_file:
         data_to_save = list(dict_gen)
         keys_from_dict = list(data_to_save[0].keys())
         csv_writer = csv.DictWriter(csv_file, keys_from_dict)
-        csv_writer.writeheader()
+        if not file_exists:
+            csv_writer.writeheader()
         csv_writer.writerows(data_to_save)
 
 
