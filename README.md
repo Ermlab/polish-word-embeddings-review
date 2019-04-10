@@ -32,6 +32,7 @@ https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pl.300.bin.gz
 
 |  name | vocab size | vector size | Total analogy accuracy | pearson | spearman | out of vocab |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+|  facebook_fastext-300.txt | 2000000 | 300 | 0,66 | 0,369 | 0,3934 | 4,004 |
 |  nkjp+wiki-lemmas-restricted-300-skipg-ns.txt | 1407762 | 300 | 0,62 | 0,3875 | 0,4444 | 1,6016 |
 |  nkjp+wiki-lemmas-all-300-skipg-ns.txt | 1549322 | 300 | 0,61 | 0,3973 | 0,4567 | 1,6016 |
 |  nkjp+wiki-lemmas-restricted-300-cbow-ns.txt | 1407762 | 300 | 0,59 | 0,4132 | 0,4541 | 1,6016 |
@@ -58,6 +59,7 @@ https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pl.300.bin.gz
 |  nkjp+wiki-forms-restricted-300-skipg-ns.txt | 1982479 | 300 | 0,48 | 0,3833 | 0,4406 | 1,3013 |
 |  wiki-lemmas-restricted-100-cbow-ns.txt | 446608 | 100 | 0,48 | 0,3321 | 0,3725 | 2,1021 |
 |  nkjp-lemmas-all-300-cbow-ns.txt | 1282621 | 300 | 0,48 | 0,4057 | 0,4544 | 1,6016 |
+|  kyubyong_fasttext.txt | 50036 | 300 | 0,48 | 0,3114 | 0,3879 | 41,4414 |
 |  nkjp-lemmas-restricted-100-skipg-ns.txt | 1162845 | 100 | 0,47 | 0,3613 | 0,403 | 1,6016 |
 |  nkjp+wiki-lemmas-all-100-skipg-ns.txt | 1549322 | 100 | 0,46 | 0,3524 | 0,4054 | 1,6016 |
 |  nkjp+wiki-forms-all-300-skipg-ns.txt | 2123132 | 300 | 0,46 | 0,3881 | 0,4388 | 1,3013 |
@@ -117,6 +119,7 @@ https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pl.300.bin.gz
 |  wiki-forms-all-300-cbow-ns.txt | 724756 | 300 | 0,24 | 0,2791 | 0,3138 | 5,5055 |
 |  nkjp+wiki-forms-restricted-300-cbow-hs.txt | 1982479 | 300 | 0,23 | 0,2974 | 0,3147 | 1,3013 |
 |  nkjp-forms-restricted-300-cbow-hs.txt | 1713738 | 300 | 0,23 | 0,3061 | 0,322 | 1,3013 |
+|  kyubyong_word2vec.txt | 50035 | 300 | 0,23 | 0,2544 | 0,3087 | 41,4414 |
 |  nkjp-lemmas-restricted-100-cbow-hs.txt | 1162845 | 100 | 0,22 | 0,3503 | 0,3967 | 1,6016 |
 |  wiki-forms-restricted-100-skipg-hs.txt | 698304 | 100 | 0,22 | 0,2594 | 0,3215 | 5,2052 |
 |  nkjp-forms-all-300-cbow-hs.txt | 1832700 | 300 | 0,22 | 0,2962 | 0,311 | 1,3013 |
@@ -138,6 +141,7 @@ https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pl.300.bin.gz
 |  wiki-forms-all-300-cbow-hs.txt | 724756 | 300 | 0,13 | 0,2636 | 0,2925 | 5,5055 |
 |  wiki-forms-restricted-100-cbow-hs.txt | 698304 | 100 | 0,09 | 0,2162 | 0,2427 | 5,2052 |
 |  wiki-forms-all-100-cbow-hs.txt | 724756 | 100 | 0,08 | 0,2294 | 0,2611 | 5,5055 |
+
 
 ## References
 Polish Word Analogy: https://dl.fbaipublicfiles.com/fasttext/word-analogies/questions-words-pl.txt
