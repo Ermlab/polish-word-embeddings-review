@@ -27,6 +27,9 @@ https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pl.300.bin.gz
 
 ## Evaluation procedure
 
+To evaluate the word embedding, we use the function evaluation_word_pairs and assessment_word_analogies provided by gensim.
+
+For analogue testing, a file provided by facebook fastext is used, a link to it can be found in References. To evaluate the similarity in word embedding, the Polish version of SimLex999, made available by IPIPAN, is used, but we had to adjust it to the function by removing the column with the row identifier and the entire relatedness column. A link to the version provided by IPIPAN can be found in References.
 
 ## Results
 
@@ -144,7 +147,10 @@ https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pl.300.bin.gz
 
 
 ## References
-Polish Word Analogy: https://dl.fbaipublicfiles.com/fasttext/word-analogies/questions-words-pl.txt
+Polish Word Analogy: 
 
-MSimLex999 Polish
+https://dl.fbaipublicfiles.com/fasttext/word-analogies/questions-words-pl.txt
+
+MSimLex999 Polish:
+
 http://zil.ipipan.waw.pl/CoDeS?action=AttachFile&do=view&target=MSimLex999_Polish.zip
