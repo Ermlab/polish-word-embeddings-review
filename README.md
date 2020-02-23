@@ -18,12 +18,13 @@ Word2Vec
 - https://drive.google.com/file/d/0B0ZXk88koS2KbFlmMy1PUHBSZ0E/view
 
 ### Pre-Trained Models
-https://clarin-pl.eu/dspace/handle/11321/442
-https://clarin-pl.eu/dspace/handle/11321/606
-https://clarin-pl.eu/dspace/handle/11321/600
-https://clarin-pl.eu/dspace/handle/11321/327
-http://vectors.nlpl.eu/repository (id: 62,167)
-https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pl.300.bin.gz
+
+* https://clarin-pl.eu/dspace/handle/11321/442
+* https://clarin-pl.eu/dspace/handle/11321/606
+* https://clarin-pl.eu/dspace/handle/11321/600
+* https://clarin-pl.eu/dspace/handle/11321/327
+* http://vectors.nlpl.eu/repository (id: 62,167)
+* https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pl.300.bin.gz
 
 ## Evaluation procedure
 
