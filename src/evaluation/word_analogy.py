@@ -4,6 +4,7 @@ import os
 import coloredlogs
 from gensim.models import KeyedVectors
 from gensim.models.fasttext import FastText
+from gensim.models.word2vec import Word2Vec
 
 
 class WordAnalogyW2VFormat:
@@ -80,7 +81,7 @@ class WordAnalogyW2VFormat:
         Evaluate word pairs
         """
 
-        if isinstance(model, FastText):
+        if isinstance(model, FastText) or isinstance(model, Word2Vec):
             similarity = model.wv.evaluate_word_pairs(path_to_simlex)
         else:
             similarity = model.evaluate_word_pairs(path_to_simlex)
