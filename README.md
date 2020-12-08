@@ -17,6 +17,9 @@ Fasttext
 Word2Vec
 - https://drive.google.com/file/d/0B0ZXk88koS2KbFlmMy1PUHBSZ0E/view
 
+Embeddings from Sławomir Dadas (embeddings in results with sdadas prefix):
+* https://github.com/sdadas/polish-nlp-resources
+
 ### Pre-Trained Models
 
 * https://clarin-pl.eu/dspace/handle/11321/442
@@ -26,11 +29,13 @@ Word2Vec
 * http://vectors.nlpl.eu/repository (id: 62,167)
 * https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.pl.300.bin.gz
 
+
+
 ## Evaluation procedure
 
 To evaluate the word embedding, we use the function evaluation_word_pairs and assessment_word_analogies provided by gensim.
 
-For analogue testing, a file provided by facebook fastext is used, a link to it can be found in References. To evaluate the similarity in word embedding, the Polish version of SimLex999, made available by IPIPAN, is used, but we had to adjust it to the function by removing the column with the row identifier and the entire relatedness column. A link to the version provided by IPIPAN can be found in References.
+For analogue testing, a file provided by facebook fastext is used, a link to it can be found in References. To evaluate the similarity in word embedding, the Polish version of SimLex999, made available by IPIPAN, is used, but we had to adjust it to the function by removing the column with the row identifier (first collumn) and the entire relatedness column (last column). A link to the version provided by IPIPAN can be found in References.
 
 ## Results
 
@@ -145,6 +150,10 @@ For analogue testing, a file provided by facebook fastext is used, a link to it 
 |  wiki-forms-all-300-cbow-hs.txt | 724756 | 300 | 0,13 | 0,2636 | 0,2925 | 5,5055 |
 |  wiki-forms-restricted-100-cbow-hs.txt | 698304 | 100 | 0,09 | 0,2162 | 0,2427 | 5,2052 |
 |  wiki-forms-all-100-cbow-hs.txt | 724756 | 100 | 0,08 | 0,2294 | 0,2611 | 5,5055 |
+|sdadas_word2vec_100_3_polish.bin| 1934030| 100|0,33   |0,3961 |0,4616|1,1011|
+|sdadas_fasttext_100_3_polish.bin| 2488306| 100|0,23   |0,3532 |0,4092|1,1011|
+|sdadas_glove_100_3_polish.txt   | 1926320| 100|0,54   |0,3128 |0,3705|1,1011|
+|sdadas_glove_300_3_polish.txt   | 1926319| 300|0,62   |0,351  |0,4027|1,1011|
 
 
 ## References
