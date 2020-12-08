@@ -51,7 +51,7 @@ class WordAnalogyW2VFormat:
         """
         Evaluate every embedding in self.paths. Logs Path of embedding, Vocab and vector size, total and each section accuracy
         """
-        if isinstance(model, FastText):
+        if isinstance(model, FastText) or isinstance(model, Word2Vec):
             analogy = model.wv.evaluate_word_analogies(self.path_to_analogy)
             len_vocab = len(model.wv.vocab)
         else:
