@@ -154,7 +154,7 @@ For analogue testing, a file provided by facebook fastext is used, a link to it 
 |sdadas_fasttext_100_3_polish.bin| 2488306| 100|0,23   |0,3532 |0,4092|1,1011|
 |sdadas_glove_100_3_polish.txt   | 1926320| 100|0,54   |0,3128 |0,3705|1,1011|
 |sdadas_glove_300_3_polish.txt   | 1926319| 300|0,62   |0,351  |0,4027|1,1011|
-
+|sdadas_glove_500_3_polish.txt   | 1926319| 500|0,61   |0,3493 |0,3987|1.1011|
 
 ## References
 Polish Word Analogy: 
