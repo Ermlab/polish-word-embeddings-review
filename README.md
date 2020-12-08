@@ -152,12 +152,12 @@ For analogue testing, a file provided by facebook fastext is used, a link to it 
 |  wiki-forms-all-100-cbow-hs.txt | 724756 | 100 | 0,08 | 0,2294 | 0,2611 | 5,5055 |
 |sdadas_word2vec_100_3_polish.bin|1934030|100|0,33|0,3961|0,4616|1,1011|
 |sdadas_word2vec_300_3_polish.bin|1934028|300|0,41|0,442 |0,5005|1,1011|
+|sdadas_word2vec_500_3_polish.bin|1934028|500|0,42|0.4532|0.5107|1.1011|
 |sdadas_fasttext_100_3_polish.bin|2488306|100|0,23|0,3532|0,4092|1,1011|
 |sdadas_glove_100_3_polish.txt   |1926320|100|0,54|0,3128|0,3705|1,1011|
 |sdadas_glove_300_3_polish.txt   |1926319|300|0,62|0,351 |0,4027|1,1011|
 |sdadas_glove_500_3_polish.txt   |1926319|500|0,61|0,3493|0,3987|1,1011|
-|sdadas_glove_800_3_polish.txt   |1926319|800|0.57|0.3401|0.3911|1,1011|
-
+|sdadas_glove_800_3_polish.txt   |1926319|800|0,57|0.3401|0.3911|1,1011|
 ## References
 Polish Word Analogy: 
 
