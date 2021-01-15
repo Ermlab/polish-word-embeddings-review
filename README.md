@@ -17,7 +17,7 @@ Fasttext
 Word2Vec
 - https://drive.google.com/file/d/0B0ZXk88koS2KbFlmMy1PUHBSZ0E/view
 
-Embeddings from Sławomir Dadas (embeddings in results with sdadas prefix):
+Embeddings from Sławomir Dadas (embeddings in results with opi prefix):
 * https://github.com/sdadas/polish-nlp-resources
 
 ### Pre-Trained Models
